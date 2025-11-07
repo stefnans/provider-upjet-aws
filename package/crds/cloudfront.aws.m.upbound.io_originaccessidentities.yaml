@@ -168,7 +168,8 @@ spec:
                   iamArn:
                     description: |-
                       A pre-generated ARN for use in S3 bucket policies (see below).
-                      Example: arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E2QWRUHAPOMQZL.
+                      Example: arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+                      E2QWRUHAPOMQZL.
                     type: string
                   id:
                     description: The identifier for the origin access identity.

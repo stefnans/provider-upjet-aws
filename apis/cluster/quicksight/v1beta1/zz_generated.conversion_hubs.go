@@ -7,6 +7,12 @@
 package v1beta1
 
 // Hub marks this type as a conversion hub.
+func (tr *AccountSubscription) Hub() {}
+
+// Hub marks this type as a conversion hub.
+func (tr *DataSource) Hub() {}
+
+// Hub marks this type as a conversion hub.
 func (tr *Group) Hub() {}
 
 // Hub marks this type as a conversion hub.

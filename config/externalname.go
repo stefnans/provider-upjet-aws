@@ -1999,6 +1999,10 @@ var TerraformPluginSDKExternalNameConfigs = map[string]config.ExternalName{
 	// No import
 	// TODO: For now API is not normalized. While testing resource we can check the actual ID and normalize the API.
 	"aws_quicksight_user": config.IdentifierFromProvider,
+	// QuickSight Data Source can be imported using the aws account id and the data source id separated by /
+	"aws_quicksight_data_source": FormattedIdentifierFromProvider("/", "aws_account_id", "data_source_id"),
+	// QuickSight Account Subscription can be imported using aws_account_id
+	"aws_quicksight_account_subscription": config.ParameterAsIdentifier("aws_account_id"),
 
 	// ram
 	//

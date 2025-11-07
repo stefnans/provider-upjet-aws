@@ -706,6 +706,8 @@ import (
 	providerconfig "github.com/upbound/provider-aws/internal/controller/cluster/providerconfig"
 	ledger "github.com/upbound/provider-aws/internal/controller/cluster/qldb/ledger"
 	streamqldb "github.com/upbound/provider-aws/internal/controller/cluster/qldb/stream"
+	accountsubscription "github.com/upbound/provider-aws/internal/controller/cluster/quicksight/accountsubscription"
+	datasourcequicksight "github.com/upbound/provider-aws/internal/controller/cluster/quicksight/datasource"
 	groupquicksight "github.com/upbound/provider-aws/internal/controller/cluster/quicksight/group"
 	userquicksight "github.com/upbound/provider-aws/internal/controller/cluster/quicksight/user"
 	principalassociation "github.com/upbound/provider-aws/internal/controller/cluster/ram/principalassociation"
@@ -1689,6 +1691,8 @@ func Setup_monolith(mgr ctrl.Manager, o controller.Options) error {
 		providerconfig.Setup,
 		ledger.Setup,
 		streamqldb.Setup,
+		accountsubscription.Setup,
+		datasourcequicksight.Setup,
 		groupquicksight.Setup,
 		userquicksight.Setup,
 		principalassociation.Setup,
@@ -2678,6 +2682,8 @@ func SetupGated_monolith(mgr ctrl.Manager, o controller.Options) error {
 		providerconfig.SetupGated,
 		ledger.SetupGated,
 		streamqldb.SetupGated,
+		accountsubscription.SetupGated,
+		datasourcequicksight.SetupGated,
 		groupquicksight.SetupGated,
 		userquicksight.SetupGated,
 		principalassociation.SetupGated,

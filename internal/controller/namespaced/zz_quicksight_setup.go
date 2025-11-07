@@ -9,6 +9,8 @@ import (
 
 	"github.com/crossplane/upjet/v2/pkg/controller"
 
+	accountsubscription "github.com/upbound/provider-aws/internal/controller/namespaced/quicksight/accountsubscription"
+	datasource "github.com/upbound/provider-aws/internal/controller/namespaced/quicksight/datasource"
 	group "github.com/upbound/provider-aws/internal/controller/namespaced/quicksight/group"
 	user "github.com/upbound/provider-aws/internal/controller/namespaced/quicksight/user"
 )
@@ -17,6 +19,8 @@ import (
 // the supplied manager.
 func Setup_quicksight(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
+		accountsubscription.Setup,
+		datasource.Setup,
 		group.Setup,
 		user.Setup,
 	} {
@@ -31,6 +35,8 @@ func Setup_quicksight(mgr ctrl.Manager, o controller.Options) error {
 // the supplied manager gated.
 func SetupGated_quicksight(mgr ctrl.Manager, o controller.Options) error {
 	for _, setup := range []func(ctrl.Manager, controller.Options) error{
+		accountsubscription.SetupGated,
+		datasource.SetupGated,
 		group.SetupGated,
 		user.SetupGated,
 	} {

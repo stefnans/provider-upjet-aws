@@ -671,6 +671,8 @@
 "aws_proxy_protocol_policy",
 "aws_qldb_ledger",
 "aws_qldb_stream",
+"aws_quicksight_account_subscription",
+"aws_quicksight_data_source",
 "aws_quicksight_group",
 "aws_quicksight_user",
 "aws_ram_principal_association",

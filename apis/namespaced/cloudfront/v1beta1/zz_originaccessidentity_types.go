@@ -41,7 +41,8 @@ type OriginAccessIdentityObservation struct {
 	Etag *string `json:"etag,omitempty" tf:"etag,omitempty"`
 
 	// A pre-generated ARN for use in S3 bucket policies (see below).
-	// Example: arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E2QWRUHAPOMQZL.
+	// Example: arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
+	// E2QWRUHAPOMQZL.
 	IAMArn *string `json:"iamArn,omitempty" tf:"iam_arn,omitempty"`
 
 	// The identifier for the origin access identity.
